@@ -24,7 +24,7 @@
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
 
-![and_gates](and_gates.png)
+![and_gates](Images/and_gates.png)
 
 | **A** | **B** |**C** | **f** | **f<sub>AND<sub>** | **f<sub>OR<sub>** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
