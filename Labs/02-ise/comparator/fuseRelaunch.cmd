@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/02-ise/comparator/top_testbench01_isim_beh.exe" -prj "/home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/02-ise/comparator/top_testbench01_beh.prj" "work.top_testbench01" 
