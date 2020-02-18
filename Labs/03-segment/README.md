@@ -18,3 +18,4 @@
 | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
 
+![display](../../Images/seven-segment-display.jpg)
