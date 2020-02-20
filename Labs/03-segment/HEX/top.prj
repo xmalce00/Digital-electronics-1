@@ -1,0 +1,2 @@
+vhdl work "HEX_to_seven_segment_display.vhd"
+vhdl work "top.vhd"
