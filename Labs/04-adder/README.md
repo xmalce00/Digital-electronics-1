@@ -6,7 +6,7 @@
 | 1 | 0 | 0 | 1 |
 | 1 | 1 | 1 | 0 |
 
-![HA](/.../Images/Half_adder.png)
+![HA](../../Images/Half_adder.png)
 # 2.
 | **Cin** | **B** | **A** | **Cout** | **Sum** |
 | :-: | :-: | :-: | :-: | :-: |
