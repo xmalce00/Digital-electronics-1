@@ -1,0 +1,8 @@
+EN half_adder NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/half_adder.vhd sub00/vhpl00 1582793395
+AR hex_to_seven_segment_display behavioral /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd sub00/vhpl06 1582793400
+EN top NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/top.vhd sub00/vhpl04 1582793401
+EN full_adder NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/full_adder.vhd sub00/vhpl02 1582793397
+AR full_adder behavioral /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/full_adder.vhd sub00/vhpl03 1582793398
+AR half_adder behavioral /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/half_adder.vhd sub00/vhpl01 1582793396
+EN hex_to_seven_segment_display NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd sub00/vhpl05 1582793399
+AR top behavioral /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/top.vhd sub00/vhpl07 1582793402

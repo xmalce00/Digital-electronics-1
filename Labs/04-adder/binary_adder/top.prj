@@ -1,0 +1,4 @@
+vhdl work "half_adder.vhd"
+vhdl work "full_adder.vhd"
+vhdl work "../../03-segment/HEX/HEX_to_seven_segment_display.vhd"
+vhdl work "top.vhd"

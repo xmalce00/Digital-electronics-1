@@ -1,0 +1,30 @@
+V3 15
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd 2020/02/20.08:23:10 P.20131013
+EN work/HEX_to_seven_segment_display 1582793399 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/HEX_to_seven_segment_display/Behavioral 1582793400 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd \
+      EN work/HEX_to_seven_segment_display 1582793399
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/full_adder.vhd 2020/02/27.08:50:03 P.20131013
+EN work/full_adder 1582793397 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/full_adder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/full_adder/Behavioral 1582793398 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/full_adder.vhd \
+      EN work/full_adder 1582793397 CP work/half_adder
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/half_adder.vhd 2020/02/27.08:31:49 P.20131013
+EN work/half_adder 1582793395 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/half_adder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/half_adder/Behavioral 1582793396 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/half_adder.vhd \
+      EN work/half_adder 1582793395
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/top.vhd 2020/02/27.09:49:48 P.20131013
+EN work/top 1582793401 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1582793402 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/04-adder/binary_adder/top.vhd \
+      EN work/top 1582793401 CP work/full_adder \
+      CP work/HEX_to_seven_segment_display
