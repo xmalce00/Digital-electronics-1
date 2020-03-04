@@ -6,7 +6,7 @@
 
 | **Freq** | **Time** | **Number of periods** | **Number of periods in binary** | **Number of periods in hexa** |
 | :-: | :-: | :-: | :-: | :-: |
-| 100&nbsp;Hz | 10&nbsp;ms |  |  |  |
+| 100&nbsp;Hz | 10&nbsp;ms | 100 | 1100100 | 64 |
 | 4&nbsp;Hz | 250&nbsp;ms |  |  |  |
 | 2&nbsp;Hz | 500&nbsp;ms |  |  |  |
 | 1&nbsp;Hz | 1&nbsp;sec |  |  |  |
