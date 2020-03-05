@@ -1,0 +1,5 @@
+EN binary_cnt NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd sub00/vhpl00 1583398184
+AR binary_cnt behavioral /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd sub00/vhpl01 1583398185
+AR hex_to_seven_segment_display behavioral /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd sub00/vhpl03 1583398187
+EN top NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd sub00/vhpl04 1583398188
+EN hex_to_seven_segment_display NULL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd sub00/vhpl02 1583398186

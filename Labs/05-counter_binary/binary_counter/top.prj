@@ -1,0 +1,3 @@
+vhdl work "binary_cnt.vhd"
+vhdl work "../../03-segment/HEX/HEX_to_seven_segment_display.vhd"
+vhdl work "top.vhd"

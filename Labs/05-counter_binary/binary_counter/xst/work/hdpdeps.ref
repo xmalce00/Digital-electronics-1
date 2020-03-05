@@ -1,0 +1,23 @@
+V3 12
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd 2020/02/20.08:23:10 P.20131013
+EN work/HEX_to_seven_segment_display 1583398186 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/HEX_to_seven_segment_display/Behavioral 1583398187 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/03-segment/HEX/HEX_to_seven_segment_display.vhd \
+      EN work/HEX_to_seven_segment_display 1583398186
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd 2020/03/05.08:52:23 P.20131013
+EN work/binary_cnt 1583398184 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/binary_cnt/Behavioral 1583398185 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd \
+      EN work/binary_cnt 1583398184
+FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd 2020/03/05.09:36:05 P.20131013
+EN work/top 0 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 0 \
+      FL /home/lab661/Documents/xmahut00/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd \
+      EN work/top 0 CP work/clock_enable CP work/binary_cnt \
+      CP work/HEX_to_seven_segment_display
