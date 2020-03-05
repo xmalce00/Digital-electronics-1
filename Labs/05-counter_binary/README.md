@@ -1,5 +1,5 @@
 
-## Preparation tasks (done before the lab at home)
+### LAB 5 Binary counter
 &nbsp;    
 ![equation](https://latex.codecogs.com/gif.latex?T_%7B_%7Bclk%7D%7D%20%3D%20%5Cfrac%7B%5E%7B1%7D%7D%7Bf_%7Bclk%7D%7D%20%3D%200.1%20ms)
 &nbsp;
