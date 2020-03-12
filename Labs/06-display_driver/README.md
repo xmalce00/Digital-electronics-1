@@ -1,6 +1,6 @@
 # Display driver
 
-'''javascript
+```javascript
 {signal: [
   ['Digit position',
     {name: 'disp_dig_o(3)', wave: 'xx01..01..xx', },
@@ -24,4 +24,5 @@
     text: '4ms   4ms   4ms   4ms   4ms   4ms   4ms   4ms',
   },
 }
-'''
+
+```
