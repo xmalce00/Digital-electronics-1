@@ -28,3 +28,6 @@
 ```
 
 ![wave](../../Images/lab6.jpg)
+
+
+Sekvenčný obvod sa líši od kombinačného v tom, že má výstup vyvedený rovno na vstup a obsahuje pamať. Sekvenčný obvod môže fungovať, ako pamaťový člen na uchovanie informácie. Kobinačný obvod funguje konštantne. Sekvenčný systém ma pamať a reaguje na pulzy (hodinové pulzy).
