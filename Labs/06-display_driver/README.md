@@ -26,3 +26,5 @@
 }
 
 ```
+
+![wave](../../Images/lab6.jpg)
