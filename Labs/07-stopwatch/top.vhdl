@@ -11,7 +11,8 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;    -- Provides unsigned numerical computation
+use ieee.numeric_std.all;
+--use ieee.std_logic_unsigned.all;    -- Provides unsigned numerical computation
 
 ------------------------------------------------------------------------
 -- Entity declaration for display driver
@@ -19,16 +20,10 @@ use ieee.std_logic_unsigned.all;    -- Provides unsigned numerical computation
 entity driver_7seg is
 port (
     clk_i    : in  std_logic;
+    cnt_en_i : in  std_logic;	
     srst_n_i : in  std_logic;   -- Synchronous reset (active low)
-    data0_i  : in  std_logic_vector(4-1 downto 0);  -- Input values
-    data1_i  : in  std_logic_vector(4-1 downto 0);
-    data2_i  : in  std_logic_vector(4-1 downto 0);
-    data3_i  : in  std_logic_vector(4-1 downto 0);
-    dp_i     : in  std_logic_vector(4-1 downto 0);  -- Decimal points
-    
-    dp_o     : out std_logic;                       -- Decimal point
-    seg_o    : out std_logic_vector(7-1 downto 0);
-    dig_o    : out std_logic_vector(4-1 downto 0)
+    seg_o    : out unsigned(7-1 downto 0);
+    dig_o    : out unsigned(4-1 downto 0)
 );
 end entity driver_7seg;
 
@@ -36,34 +31,51 @@ end entity driver_7seg;
 -- Architecture declaration for display driver
 ------------------------------------------------------------------------
 architecture Behavioral of driver_7seg is
+	signal data0_i  : unsigned(4-1 downto 0);  
+    signal data1_i  : unsigned(4-1 downto 0);
+    signal data2_i  : unsigned(4-1 downto 0);
+    signal data3_i  : unsigned(4-1 downto 0);
     signal s_en  : std_logic;
-    signal s_hex : std_logic_vector(4-1 downto 0);
-    signal s_cnt : std_logic_vector(2-1 downto 0) := "00";
+    signal s_hex : unsigned(4-1 downto 0);
+    signal s_cnt : unsigned(2-1 downto 0) := "00";
 begin
 
     --------------------------------------------------------------------
     -- Sub-block of clock_enable entity. Create s_en signal.
-    --- WRITE YOUR CODE HERE
-	
-  	clock_enable0 : entity work.clock_enable
-	generic map (
-		g_NPERIOD => x"0028"    
-	)
-	port map (
-        clk_i => clk_i,
-		srst_n_i => srts_n_i,
-		clock_enable_o => s_en
-	);
+    
+     CLOCK: entity work.clock_enable
+	 generic map(
+			g_NPERIOD => x"0064"			-- 100ms with 10kHz signal
+	 			)
+	 port map(
+			clk_i    		=> clk_i,  		-- 10 kHz
+			srst_n_i 		=> srst_n_i,   	-- Synchronous reset
+			clock_enable_o 	=> s_en			
+	 		 );
 
     --------------------------------------------------------------------
     -- Sub-block of hex_to_7seg entity
-    --- WRITE YOUR CODE HERE
+    
+	 HEX2SSEG: entity work.hex_to_7seg
+	 port map(
+			hex_i => s_hex,
+			seg_o => seg_o
+	 		 );
 	
-  	hex_to_7seg : entity work.HEX_to_seven_segment_display
-    port map (
-    	hex_i => s_hex,
-        seg_o => seg_o
-    );
+    -----------------------------------------------------------------------
+    -- Sub-block of stopwatch entity
+    
+    STOPWATCH: entity work.stopwatch
+    port map(
+    		clk_i		=> clk_i,
+            ce_100Hz_i	=> s_en, 
+    		srst_n_i    => srst_n_i,
+    		cnt_en_i   	=> cnt_en_i,
+    		sec_h_o    	=> data3_i,
+    		sec_l_o     => data2_i,
+   			hth_h_o     => data1_i,
+    		hth_l_o     => data0_i
+    		);
 
     --------------------------------------------------------------------
     -- p_select_cnt:
@@ -73,13 +85,15 @@ begin
     --------------------------------------------------------------------
     p_select_cnt : process (clk_i)
     begin
-        if rising_edge(clk_i) then  -- Rising clock edge
-            if srst_n_i = '0' then  -- Synchronous reset (active low)
-                -- WRITE YOUR CODE HERE
+        if rising_edge(clk_i) then  
+            if srst_n_i = '0' then
                 s_cnt <= "00";
             elsif s_en = '1' then
-                -- WRITE YOUR CODE HERE
-                s_cnt <= s_cnt + "01";
+                if s_cnt = "11"then 
+                	s_cnt <= "00";
+                else 
+                	s_cnt <= s_cnt+"01"; 
+                end if;
             end if;
         end if;
     end process p_select_cnt;
@@ -88,33 +102,21 @@ begin
     -- p_mux:
     -- Combinational process which implements a 4-to-1 mux.
     --------------------------------------------------------------------
-    p_mux : process (s_cnt, data0_i, data1_i, data2_i, data3_i, dp_i)
+    p_mux : process (s_cnt, data0_i, data1_i, data2_i, data3_i)
     begin
         case s_cnt is
         when "00" =>
-            -- WRITE YOUR CODE HERE
-            s_hex <= data0_i;
-            dig_o <= "1110";
-            dp_o = '1';
-            
-        when "01" =>
-            -- WRITE YOUR CODE HERE
-            s_hex <= data1_i;
-            dig_o <= "1101";
-            dp_o = '0';
-            
-        when "10" =>
-            -- WRITE YOUR CODE HERE
-            s_hex <= data2_i;
-            dig_o <= "1011";
-            dp_o = '1';
-            
-        when others =>
-            -- WRITE YOUR CODE HERE
             s_hex <= data3_i;
             dig_o <= "0111";
-            dp_o = '1';
-            
+        when "01" =>
+         	s_hex <= data2_i;
+            dig_o <= "1011";
+        when "10" =>           
+            s_hex <= data1_i;
+            dig_o <= "1101";
+        when others =>            
+            s_hex <= data0_i;
+            dig_o <= "1110";
         end case;
     end process p_mux;
 
