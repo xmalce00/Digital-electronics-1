@@ -1,7 +1,7 @@
 # Lab 7 - Stopwatch
 
 ## Simulácia
-![simulation](../../Images/lab_7_sim.png)
+![simulation](../../Images/sim_lab_7.png)
 
 ## Top level diagram
 
