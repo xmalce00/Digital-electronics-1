@@ -10,7 +10,13 @@ entity traffic is
 end traffic;
 
 architecture traffic of traffic is	    
-	type state_type is (s0, s1, s2, s3, s4, s5);
+	type state_type is (RG, RY, RRmid, GR, YR, RRend);
+    -- RG -- first red, second green
+    -- RY
+    -- RRmid
+    -- GR
+    -- YR
+    -- RRend
     signal state: state_type;
     signal count: unsigned(3 downto 0);
     constant SEC5: unsigned(3 downto 0) := "1111";
@@ -20,61 +26,61 @@ begin
     process (clk, reset)
     begin
 		if reset = '1' then
-        	state <= s0;
+        	state <= RG;
             count <= X"0";
             
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
         	
             case state is
-            	when s0 => 
+            	when RG => 
                 	if count < SEC5 then
-                    	state <= s0;
+                    	state <= RG;
                         count <= count + x"1";
                     else 
-                    	state <= s1;
+                    	state <= RY;
                         count <= X"0";
                     end if;
-                when s1 => 
+                when RY => 
                 	if count < SEC1 then
-                    	state <= s1;
+                    	state <= RY;
                         count <= count + "0001";
                     else 
-                    	state <= s2;
+                    	state <= RRmid;
                         count <= X"0";
                     end if;
-                when s2 => 
+                when RRmid => 
                 	if count < SEC1 then
-                    	state <= s2;
+                    	state <= RRmid;
                         count <= count +"0001";
                     else 
-                    	state <= s3;
+                    	state <= GR;
                         count <= X"0";
                     end if;
-               when s3 => 
+               when GR => 
                 	if count < SEC5 then
-                    	state <= s3;
+                    	state <= GR;
                         count <= count + "0001";
                     else 
-                    	state <= s4;
+                    	state <= YR;
                         count <= X"0";
                     end if;
-               when s4 => 
+               when YR => 
                 	if count < SEC1 then
-                    	state <= s4;
+                    	state <= YR;
                         count <= count + X"1";
                     else 
-                    	state <= s5;
+                    	state <= RRend;
                         count <= X"0";
                     end if;
-               when s5 => 
+               when RRend => 
                 	if count < SEC1 then
-                    	state <= s5;
+                    	state <= RRend;
                         count <= count + "0001";
                     else 
-                    	state <= s0;
+                    	state <= RG;
                         count <= X"0";
                     end if;
-       			when others => state <= s0;
+       			when others => state <= RG;
              end case;
          end if;
     end process;
@@ -82,12 +88,12 @@ begin
     C2: process(state)
     	begin
    			case state is 
-            	when s0 => lights <= "100001";
-                when s1 => lights <= "100010";
-                when s2 => lights <= "100100";
-                when s3 => lights <= "001100";
-                when s4 => lights <= "010100";
-                when s5 => lights <= "100100";
+            	when RG => lights <= "100001";
+                when RY => lights <= "100010";
+                when RRmid => lights <= "100100";
+                when GR => lights <= "001100";
+                when YR => lights <= "010100";
+                when RRend => lights <= "100100";
                 when others => lights <= "100001";
             end case;
     end process;

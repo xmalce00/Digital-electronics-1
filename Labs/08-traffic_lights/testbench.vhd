@@ -43,16 +43,9 @@ architecture tb of testbench is
 
     -- Stimulus process
     stim_proc: process
-    begin
-        s_reset <= '1';
-        wait until rising_edge(s_clk);	
-        wait until rising_edge(s_clk);	
-        s_reset <= '0';
-        wait until rising_edge(s_clk);	
-        wait until rising_edge(s_clk);	
-        wait until rising_edge(s_clk);	
-        s_reset <= '1';
-        wait;
+    begin	
+       wait until rising_edge(s_clk);	
+       wait;
     
     end process;        
 end tb;
