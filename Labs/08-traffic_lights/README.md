@@ -1,6 +1,6 @@
 ### Lab 8 - traffic lights
 
-#### Simalácia
+#### Simulácia
 ![simulation](../../Images/lab_8_sim.jpg)
 
 #### State diagram
