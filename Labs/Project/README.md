@@ -1,4 +1,4 @@
-# Ultrazvukový merač vzdialenosti s modulom HC-SR4
+# Ultrazvukový merač vzdialenosti HC-SR4
 
 #### Table of contents
 
