@@ -11,7 +11,8 @@ Funguje na princípe odrazu vysielaného ultrazku od okolitých objektov. Modul 
 2. [Bloky kódu](#Bloky-kódu)
 3. [Simulácia](#Simulácia)
 4. [Schéma](#Schéma)
-5. [Zdroje](#Zdroje)
+5. [Odkaz na EDA Playground](#Odkaz-na-EDA-Playground)
+6. [Zdroje](#Zdroje)
 
 
 ## Zadanie
@@ -54,6 +55,7 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 
 TBD
 
+## Odkaz na EDA Playground
 
 ## Zdroje
 
