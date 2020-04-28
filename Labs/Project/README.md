@@ -44,7 +44,7 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 
 ## Simulácia
 
-![sim_sonar](../../Images/Project/sim_driver_7seg.jpg)
+![sim_sonar](../../Images/Project/sim_driver_7seg.png)
 
 ## Schéma
 
