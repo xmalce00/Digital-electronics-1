@@ -3,7 +3,7 @@
 ### Utrazvukový merač
 Funguje na princípe odrazu vysielaného ultrazku od okolitých objektov. Modul HC-SR4 obsahuje vysielač a prijímač, ďalej obsahuje štyri piny, dva slúžia na napájanie, tretí slúži na zahájenie merania (trigger) a posledný slúži ako výstupný pin (echo). Vlastné meranie prebieha tak, že na trigger sa privedie spúšťací inpulz vysokej úrovne v dĺžke trvania 10 µs, vysielač vyšle 8 meraných impulzov, tie vyhodnotí a na echo pin privedie signál vysokej úrovne odpovedajúcej dĺžky, ktorý sa následne spracuváva procesorom.
 
-![sonar](../../Images/Project/hcsr04.jpg)
+![sonar](../../Images/Project/hcsr04-small.jpg)
 
 #### Obsah
 
