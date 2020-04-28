@@ -35,12 +35,10 @@ Tento blok je vstupný blok celého zariadenia. Jeho úlohou je vyslať pulz na 
 Po prijatí dát od vstupného bloku je potrebné tieto dáta upraviť tak aby ich bolo možné zobraziť na sedemsegmentovom displayi ako jednotlivé čísla. Na tento účel slúži blok driver. Vstupný signál data_i je prevedený na typ premennej Integer, aby mohli byť jednoduchšie vykonávané matematické operácie. Pre určenie jednotiek daného čísla je použitá funkcia modulo 10, ktoré vráti hodnotu celočíselného zvyšku po delení 10. Pre získanie desiatok je číslo vydelené číslom 10 a potom je opäť použitá funkcia modulo 10. Pre stovky a tisíce sa postupoje obdobne. Všetky číslice sú opäť prevedené na signály a posielajú sa ďalej do bloku driver_7seg. 
 
 ### Driver_7seg
+Tento blok obsahuje multiplexor, ktorý slúži na rozdelovanie hodnôt pre každý blok na sedemsegmentovom dispalyi. Je tým pádom zaistené, že číslo prisluchajúce jednotkám sa zobrazí na prvej pozícii, desiatkam na druhej atď.
 
-
-###
-
-
-
+### Hex_to_7seg
+Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové číslo, ktoré sa následne zobrazí na displayi.
 
 ## Simulácia
 
