@@ -44,11 +44,11 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 
 ## Simulácia
 
-#### Simulácia display driveru
-![sim_driver7](../../Images/Project/sim_driver_7seg.png)
-
 #### Simulácia sonaru
 ![sim_sonar](../../Images/Project/sim_sonar.png)
+
+#### Simulácia display driveru
+![sim_driver7](../../Images/Project/sim_driver_7seg.png)
 
 ## Schéma
 
