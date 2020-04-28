@@ -51,6 +51,9 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 #### Simulácia display driveru
 ![sim_driver7](../../Images/Project/sim_driver_7seg.png)
 
+#### Simulácia top modulu
+Simulácia top modulu prebieha tak, ako keby sme v skutočnosti zmerali nejakú vzdialenosť. Keďže nemáme k dispozícii ultrazvukový merač meranie uskutočňujeme pomocou testbenchu, kde počkáme na koniec spúšťacieho signálu trigger, a potom na echo pin privedieme najprv pulz s dĺžkou 100 ns a potom 246 ns.
+
 ## Schéma
 
 TBD
