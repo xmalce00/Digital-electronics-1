@@ -42,8 +42,7 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 
 ## Simulácia
 
-TBD
-
+![FA](../../Images/Full_adder.png)
 
 ## Schéma
 
