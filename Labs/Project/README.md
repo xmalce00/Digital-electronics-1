@@ -1,34 +1,37 @@
 # Ultrazvukový merač vzdialenosti HC-SR4
 
-#### Table of contents
+### Utrazvukový merač
+Funguje na princípe odrazu vysielaného ultrazku od okolitých objektov. Modul HC-SR4 obsahuje vysielač a prijímač, ďalej obsahuje štyri piny, dva slúžia na napájanie, tretí slúži na zahájenie merania (trigger) a posledný slúži ako výstupný pin (echo). Vlastné meranie prebieha tak, že na trigger sa privedie spúšťací inpulz vysokej úrovne v dĺžke trvania 10 µs, vysielač vyšle 8 meraných impulzov, tie vyhodnotí a na echo pin privedie signál vysokej úrovne odpovedajúcej dĺžky, ktorý sa následne spracuváva procesorom.
 
-1. [Introduction](#Introduction)
-2. [Hardware description](#Hardware-description)
-3. [Code description](#Code-description)
-4. [Video](#Video)
-5. [References](#References)
+#### Obsah
 
-
-## Introduction
-
-TBD
+1. [Zadanie](#Zadanie)
+2. [Bloky kódu](#Bloky-kódu)
+3. [Simulácia](#Simulácia)
+4. [Schéma](#Schéma)
+5. [Zdroje](#Zdroje)
 
 
-## Hardware description
+## Zadanie
 
 TBD
 
 
-## Code description
+## Bloky kódu
 
 TBD
 
 
-## Video
+## Simulácia
 
 TBD
 
 
-## References
+## Schéma
+
+TBD
+
+
+## Zdroje
 
 TBD
