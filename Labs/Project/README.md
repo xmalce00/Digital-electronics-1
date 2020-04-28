@@ -16,10 +16,9 @@ Funguje na princípe odrazu vysielaného ultrazku od okolitých objektov. Modul 
 
 Ultrazvukový měřič vzdálenosti HC-SR04. Výstup na 7segmentovém displeji.
 
-
 ## Bloky kódu
 
-Kód ultrazvukovéhu merača odsahuje päť hlavných blokov kódu, ktoré sú následne spojené do vrchného top modulu.
+Kód ultrazvukovéhu merača odsahuje päť hlavných blokov kódu, ktoré sú následne spojené do vrchného top modulu. Všetky bloky sú pripojené k vnútornému hodinovému signálu clk_i a resetovaciemu signálu srst_i, ktorý je aktívny v nízkej úrovni, a ktorým sa celé zaridenie vyresetuje do počiatočného stavu. 
 - clock_enable
 - sonar
 - driver
@@ -27,7 +26,7 @@ Kód ultrazvukovéhu merača odsahuje päť hlavných blokov kódu, ktoré sú n
 - hex_to_7seg
 
 ### Clock_enable
-
+Tento blok slúži na zosymchronizovanie celého zariadenia. Je v ňom možné nastaviť frekvenciu vysielania synchronizovacieho impulzu.
 
 ### Sonar
 Tento blok je vstupný blok celého zariadenia. Jeho úlohou je vyslať pulz na začatie merania v určitej dĺžke a následne načítač dĺžku odrazeného pulzu echo. Toto číslo je potom vynásovené konštantov vdialenosti a dáta sú potom posielané do ďalšieho bloku dirver.
