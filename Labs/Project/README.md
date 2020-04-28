@@ -20,12 +20,11 @@ Ultrazvukový měřič vzdálenosti HC-SR04. Výstup na 7segmentovém displeji.
 ## Bloky kódu
 
 Kód ultrazvukovéhu merača odsahuje päť hlavných blokov kódu, ktoré sú následne spojené do vrchného top modulu.
-
--sonar
--driver
--driver_7seg
--clock_enable
--hex_to_7seg
+- sonar
+- driver
+- driver_7seg
+- clock_enable
+- hex_to_7seg
 
 ###Sonar
 Tento blok je vstupný blok celého zariadenia. Jeho úlohou je vyslať pulz na začatie merania v určitej dĺžke a následne načítač dĺžku odrazeného pulzu echo. Toto číslo je potom vynásovené konštantov vdialenosti a dáta sú potom posielané do ďalšieho bloku dirver.
