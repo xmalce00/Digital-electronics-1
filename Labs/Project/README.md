@@ -46,21 +46,23 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 ## Simulácia
 
 #### Simulácia clock_enable
+![sim_enable](../../Images/Project/sim_clock_enable.png)
 
 #### Simulácia sonaru
 ![sim_sonar](../../Images/Project/sim_sonar.png)
 
 #### Simulácia driveru
+![sim_driver](../../Images/Project/sim_driver.png)
 
 #### Simulácia display driveru_7seg
 ![sim_driver7](../../Images/Project/sim_driver_7seg.png)
 
 #### Simulácia top modulu
+![sim_top](../../Images/Project/sim_top.png)
 Simulácia top modulu prebieha tak, ako keby sme v skutočnosti zmerali nejakú vzdialenosť. Keďže nemáme k dispozícii ultrazvukový merač meranie uskutočňujeme pomocou testbenchu, kde počkáme na koniec spúšťacieho signálu trigger, a potom na echo pin privedieme najprv pulz s dĺžkou 100 ns a potom 246 ns.
 
 ## Schéma
-
-TBD
+![schema](../../Images/Project/schema.png)
 
 ## Odkaz na EDA Playground
 
