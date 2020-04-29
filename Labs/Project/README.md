@@ -3,7 +3,7 @@
 ### Utrazvukový merač
 Funguje na princípe odrazu vysielaného ultrazku od okolitých objektov. Modul HC-SR4 obsahuje vysielač a prijímač, ďalej obsahuje štyri piny, dva slúžia na napájanie, tretí slúži na zahájenie merania (trigger) a posledný slúži ako výstupný pin (echo). Vlastné meranie prebieha tak, že na trigger sa privedie spúšťací inpulz vysokej úrovne v dĺžke trvania 10 µs, vysielač vyšle 8 meraných impulzov, tie vyhodnotí a na echo pin privedie signál vysokej úrovne odpovedajúcej dĺžky, ktorý sa následne spracuváva procesorom.
 
-![sonar](../../Images/Project/hcsr04.jpg)
+![sonar](../../Images/Project/hcsr04-small.jpg)
 
 #### Obsah
 
@@ -11,7 +11,8 @@ Funguje na princípe odrazu vysielaného ultrazku od okolitých objektov. Modul 
 2. [Bloky kódu](#Bloky-kódu)
 3. [Simulácia](#Simulácia)
 4. [Schéma](#Schéma)
-5. [Zdroje](#Zdroje)
+5. [Odkaz na EDA Playground](#Odkaz-na-EDA-Playground)
+6. [Zdroje](#Zdroje)
 
 
 ## Zadanie
@@ -44,13 +45,26 @@ Tento blok slúži na prevod čísla v binárnej podobe na sedemsegmentové čí
 
 ## Simulácia
 
-![FA](../../Images/Full_adder.png)
+#### Simulácia clock_enable
+
+#### Simulácia sonaru
+![sim_sonar](../../Images/Project/sim_sonar.png)
+
+#### Simulácia driveru
+
+#### Simulácia display driveru_7seg
+![sim_driver7](../../Images/Project/sim_driver_7seg.png)
+
+#### Simulácia top modulu
+Simulácia top modulu prebieha tak, ako keby sme v skutočnosti zmerali nejakú vzdialenosť. Keďže nemáme k dispozícii ultrazvukový merač meranie uskutočňujeme pomocou testbenchu, kde počkáme na koniec spúšťacieho signálu trigger, a potom na echo pin privedieme najprv pulz s dĺžkou 100 ns a potom 246 ns.
 
 ## Schéma
 
 TBD
 
+## Odkaz na EDA Playground
 
 ## Zdroje
 
-TBD
+- https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+- https://forum.arduino.cc/index.php?topic=113226.0
