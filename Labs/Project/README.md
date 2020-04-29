@@ -67,5 +67,4 @@ TBD
 ## Zdroje
 
 https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
-
 https://forum.arduino.cc/index.php?topic=113226.0
