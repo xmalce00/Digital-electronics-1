@@ -65,8 +65,10 @@ Simulácia top modulu prebieha tak, ako keby sme v skutočnosti zmerali nejakú 
 ![schema](../../Images/Project/schema.png)
 
 ## Odkaz na EDA Playground
+- https://www.edaplayground.com/x/4jJP
 
 ## Zdroje
 
 - https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
 - https://forum.arduino.cc/index.php?topic=113226.0
+- https://www.ics.uci.edu/~jmoorkan/vhdlref/var_dec.html
