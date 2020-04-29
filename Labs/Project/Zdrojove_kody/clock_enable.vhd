@@ -18,7 +18,7 @@ use ieee.std_logic_unsigned.all;    -- Provides unsigned numerical computation
 ------------------------------------------------------------------------
 entity clock_enable is
 generic (
-    g_NPERIOD : std_logic_vector(16-1 downto 0) := x"0004"
+    g_NPERIOD :  std_logic_vector(15 downto 0) := x"0004"
 );
 port (
     clk_i          : in  std_logic;
@@ -31,7 +31,7 @@ end entity clock_enable;
 -- Architecture declaration for clock enable
 ------------------------------------------------------------------------
 architecture Behavioral of clock_enable is
-    signal s_cnt : std_logic_vector(16-1 downto 0) := x"0000";
+    signal s_cnt : std_logic_vector(15 downto 0) := x"0000";
 begin
 
     --------------------------------------------------------------------

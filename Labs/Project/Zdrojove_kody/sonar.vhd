@@ -6,7 +6,9 @@ entity sonar is
 
   port(
     clk_i      :  IN   STD_LOGIC;
-    srst_i     :  IN   STD_LOGIC;                     
+    srst_i     :  IN   STD_LOGIC;
+    clk_en     :  IN   STD_LOGIC;
+    
     trig       :  OUT   STD_LOGIC;                   
     echo       :  IN  STD_LOGIC;
     data 		: OUT unsigned(8 downto 0) := "000000000"
@@ -20,7 +22,7 @@ architecture behavior of sonar is
     
     signal count : unsigned (3 downto 0) := "0000";
     
-    constant SEC10: unsigned(3 downto 0) := "1010";
+    constant SEC10: unsigned(3 downto 0) := "0001";
     
   begin
   
@@ -35,7 +37,7 @@ architecture behavior of sonar is
             data <= "000000000";
             echo_time := 0;
             state <= trigger;
-        else 
+        elsif clk_en = '1' then
             	case state is
                   when trigger =>
                       if count < SEC10 then
@@ -52,6 +54,7 @@ architecture behavior of sonar is
                           state <= echolocation;
                           echo_time := echo_time + 1; 
                       else 
+                      	  echo_time := echo_time * 5;
                       	  if(echo_time > 450) then
                           	data <= unsigned(to_unsigned(450,data'length));
                           else 

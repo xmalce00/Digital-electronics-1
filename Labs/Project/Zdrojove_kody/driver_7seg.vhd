@@ -21,6 +21,8 @@ entity driver_7seg is
 port (
     clk_i    : in  std_logic;
     srst_n_i : in  std_logic;   -- Synchronous reset (active low)
+    clk_en   : in  std_logic;
+    
     data0_i  : in  unsigned(4-1 downto 0);  -- Input values
     data1_i  : in  unsigned(4-1 downto 0);
     data2_i  : in  unsigned(4-1 downto 0);
@@ -43,19 +45,6 @@ architecture Behavioral of driver_7seg is
 begin
 
     --------------------------------------------------------------------
-    -- Sub-block of clock_enable entity. Create s_en signal.
-    
-     CLOCK: entity work.clock_enable
-	 generic map(
-			g_NPERIOD => x"0028"
-	 )
-	 port map(
-			clk_i    => clk_i,  -- 10 kHz
-			srst_n_i => srst_n_i,   -- Synchronous reset
-			clock_enable_o => s_en
-	 );
-
-    --------------------------------------------------------------------
     -- Sub-block of hex_to_7seg entity
     
 	 HEX2SSEG: entity work.hex_to_7seg
@@ -76,7 +65,7 @@ begin
         if rising_edge(clk_i) then  -- Rising clock edge
             if srst_n_i = '0' then  -- Synchronous reset (active low)
                 s_cnt <= "00";
-            elsif s_en = '1' then
+            elsif clk_en = '1' then
                 if s_cnt = "11"then -- Overflow
                 	s_cnt <= "00";
                 else 
